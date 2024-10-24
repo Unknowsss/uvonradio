@@ -1,0 +1,343 @@
+:root {
+    --bg : #ffffff rgb(255, 251, 230);
+    --purple : #401334;
+    --yellow : #FFCC00;
+    --orange : #F2B705;
+    --red : #D32F2F;
+}
+html, body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.paragraph{
+    width: 150%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* NAVBAR */
+.navbar .container-fluid{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color:rgba(244, 19, 19, 0.632);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .container-fluid img{
+    width: 8%;
+    position: absolute;
+    left: 20px;
+    margin: 0;
+    transform: translateY(-50%);
+}
+
+.navbar .navbar-main {
+    gap: 1rem;
+}
+
+.navbar .navbar-main a{
+    color: black;
+    display: inline-block;
+    font-size: 1rem;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+.navbar .navbar-main a:hover{
+    color: var(--purple);
+}
+
+.navbar .navbar-main a::after{
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--purple);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-main a:hover::after {
+    transform: scaleX(0.5);
+}
+
+/* HOME */
+.jumbotron {
+    display: flex;
+    height: 400px;
+    width: 100%;
+    margin-top: 4.6rem;
+    margin-bottom: 2rem;
+    background-color: #D32F2F;
+    align-items: center;
+
+}
+.jumbotron .container-fluid h2{
+    font-family: "Racing Sans One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size:50px;
+    height: 160px;
+    margin-top: 1rem;
+    margin-left:2rem ;
+    margin-bottom: 0;
+    overflow: hidden;
+    
+}
+.jumbotron .container-fluid p{
+    font-size: 20px;
+    margin-left: 2rem;
+    margin-top: 0.5rem;
+    width: 300px;
+    border-top: 5px black solid;
+}
+.jumbotron .container-fluid img{
+    width: 300px;
+    margin-left: 8rem;
+}
+.jumbotron .container-fluid button{
+    margin-left: 3rem;
+    margin-top: 1rem;
+    height: 90%;
+    width: 80%;
+    border-radius: 5%;
+    background-color: #F2B705;
+}
+.jumbotron .container-fluid button:hover{
+    margin-left: 3rem;
+    margin-top: 1rem;
+    border-radius: 5%;
+    background-color:white;
+    
+}
+
+.jumbotron .container-fluid a{
+    text-decoration: none;
+}
+
+/* slider */
+.cover {
+    position: relative;
+    padding: 0px 30px;
+    margin-top: 100px;
+}
+.cover h1{
+    margin-bottom: 2.5rem;
+}
+/* .left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+} */
+
+.scroll-images {
+    display: flex;
+    overflow-x: hidden; /* Sembunyikan scroll bar horizontal */
+    width: calc(3 * (300px + 16px)); /* Lebar untuk 3 card, termasuk margin antar card */
+    margin: 0 auto;
+  }
+
+  /* Set card dengan ukuran 300px x 300px */
+  .child {
+    width: 300px;
+    height: 300px;
+    margin-right: 16px; /* Tambahkan margin antar card */
+    background-color: #f0f0f0;
+    text-align: center;
+    line-height: 300px; /* Membuat teks berada di tengah vertikal */
+    font-size: 18px;
+    border-radius: 10px;
+    flex-shrink: 0; /* Hindari card mengecil saat digulir */
+  }
+/* .child {
+    display: flex;
+    justify-content: center;
+    min-width: 270px;
+    height: 300px;
+    padding: 0px 15px;
+    margin: 1px 10px;
+    overflow: hidden;
+    /* -webkit-box-shadow: 0px 0px 15px 2px rgb(0 0 0 / 10%);;
+    box-shadow: 0px 0px 15px 2px rgb(0 0 0 / 10%);;
+    } */
+
+
+.child img{
+    position: absolute;
+    justify-self: center;
+    margin-top: 1.3rem;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    background: #03A9F4;
+}
+.child h5{
+    width: 200px;
+    text-align: center;
+    font-size: medium;
+    margin-top: 10rem;
+    position:absolute;
+
+
+    
+}
+.child p{
+    text-align: center;
+    margin-top: 12rem;
+}
+.scroll-images::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+    background-color: #ffffff;
+
+}
+
+.scroll-images::-webkit-scrollbar-thumb {
+    background-color: black;
+}
+
+/* akhir slider */
+
+/* uchart */
+.u-chart h1{
+    margin-left: 10rem;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: 20px;
+}
+.faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .faq-item {
+    background-color: rgba(244, 19, 19, 0.632);
+    border-radius: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  .faq-item h3 {
+    font-size: 20px;
+    margin: 0;
+  }
+
+  .faq-item p {
+    display: none;
+    margin-top: 10px;
+    color: #555;
+  }
+
+  /* Video section */
+  .faq-item video {
+    display: none;
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 8px;
+  }
+
+  .faq-item.active p,
+  .faq-item.active video {
+    display: block;
+  }
+/* akhir uchart */
+
+/* uvon galery */
+.update .container-fluid{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3rem 2rem;
+}
+.update .container-fluid h5{
+
+}
+.update .container-fluid .row{
+    display: flex;
+    margin: 2rem;
+}
+.update .container-fluid .row img{
+    height: 300px;
+    width: 300px;
+}
+
+/* akhir uvon galery */
+.trend{
+    display: flex;
+    height: 200px;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    background-color: #D32F2F;
+}
+.trend h5{
+    margin-bottom: 3rem;
+}
+/* akhir home */
+
+/* footer */
+footer{
+    display: flex;
+    height: 250px;
+    background-color:#D32F2F;
+}
+footer h4{
+    margin-top: 2rem;
+}
+footer .penjelasan{
+    margin-top:5rem;
+}
+footer a{
+text-decoration: none;
+
+}
+/* akhir footer */
+
+/* halaman live */
+.listen{
+display: flex, grid;
+margin-top: 10rem;
+}
+.listen .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5rem;
+    margin-left: 23rem;
+    height: 24rem;
+    width:34rem;
+}
+.listen .card img{
+    width: 100px;
+}
+
+/* akhir halaman web */
